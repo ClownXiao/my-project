@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"  
+    Android:orientation="vertical"  
+    Android:layout_width="fill_parent"  
+    Android:layout_height="fill_parent">  
+       
+    <!-- 结算 -->  
+     <ScrollView
+            Android:id="@+id/scroll_course_detail"
+            Android:layout_width="match_parent"
+            Android:layout_height="wrap_content" >
+    <LinearLayout 
+    Android:gravity="center_horizontal"  
+    Android:orientation="vertical" 
+    Android:layout_width="fill_parent"  
+    Android:layout_height="wrap_content">  
+    <TextView Android:id="@+id/course_name"  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+       
+        Android:text="课程名称+章节名称 "    
+        Android:textSize="22px"/>  
+  
+        <ImageView
+            Android:id="@+id/course_pic"
+            Android:layout_width="fill_parent"
+            Android:layout_height="150dp"
+            Android:src="@drawable/icon" />
+  
+     	<TextView
+         Android:id="@+id/course_introduction"
+         Android:layout_width="wrap_content"
+         Android:layout_height="wrap_content"
+         Android:text="  销售是一项报酬率非常高的艰难工作，也是一项报酬率最低的轻松工作。销售，说大不大，说小不小。小可做一针一线，大可做跨国集团。但究其本质，都是相似的。你的行动决定了你的报酬。你可以成为一个高收入的辛勤工作者，也可以成为一个收入最低的轻松工作者。这一切完全取决于你对销售工作是怎么看怎么想怎么做的。
+销售绝无一般人心中的艰难、低下，更无一般人心中的玄妙。它只是一种人生考验和生存方式，只是它以一种自由的、不稳定的状态存在着。它既可以让你一分钱也赚不到，又可以让你发财兴业。
+销售示例
+例如，客户的目标是买太阳眼镜，有的是为了要耍酷；有的是怕阳光过强，怕眯着眼睛容易增加眼角的皱纹；有的也许是昨天跟男朋友吵了架哭肿了双眼，没有东西遮着红肿的眼睛，不方便出门，因此要买一副太阳眼镜。每个人的特殊需求不一样，可以根据各人的特殊需求向其推销不同价位、颜色、款式的太阳镜。
+因此，销售的定义对我们而言是非常简单的。也就是说，您能够找出商品所能提供的特殊利益，满足客户的特殊需求，达到彼此的目的。 "
+         Android:textSize="22px" />
+     	
+     	 <Button
+         Android:id="@+id/video_button"
+         Android:layout_width="wrap_content"
+         Android:layout_height="wrap_content"
+         Android:text="视频播放" />
+     	
+     	</LinearLayout>
+    </ScrollView>
+
+    
+
+ </LinearLayout>  

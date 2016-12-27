@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="demo.Elearn"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light" >
+        <activity
+            android:name="demo.bupt.Elearn"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="demo.bupt.Act_test"
+            android:label="act1" >
+        </activity>
+        <activity
+            android:name="demo.bupt.Act_course"
+            android:label="act2" >
+        </activity>
+        <activity
+            android:name="demo.bupt.Act_friends"
+            android:label="act3" >
+        </activity>
+        <activity
+            android:name="demo.bupt.Act_myInfo"
+            android:label="act4" >
+        </activity>
+        <activity android:name="demo.bupt.test.testActivity" >
+        </activity>
+        <activity android:name="demo.bupt.test.result" >
+        </activity>
+        <activity android:name="demo.bupt.course.ChapterActivity" >
+        </activity>
+        <activity android:name="demo.bupt.course.CourseDetail" >
+        </activity>
+        <activity android:name="demo.bupt.course.VideoPlay" >
+        </activity>
+        <activity android:name="demo.bupt.login.LoadingActivity" >
+        </activity>
+        <activity android:name="demo.bupt.login.Login" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_StudyRecord" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Bookmark" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_ContactList" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Opinion" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Notice" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Pay" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Rank" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_Version" >
+        </activity>
+        <activity android:name="demo.bupt.communication.FHomeActivity" >
+        </activity>
+        <activity android:name="demo.bupt.groupchat.GHomeActivity" >
+        </activity>
+        <activity android:name="demo.bupt.myinfo.Act_MyFavorite" >
+        </activity>
+        <activity android:name="demo.bupt.contact.ContactActivity" >
+        </activity>
+    </application>
+    <!-- Internet Permissions -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Network State Permissions -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

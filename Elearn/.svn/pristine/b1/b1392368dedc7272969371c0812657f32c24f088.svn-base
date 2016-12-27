@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ActTabActivityDemo1!</string>
+    <string name="app_name">Elearn</string>
+    <string name="more">更多</string>
+    <!-- 拖拽 -->
+	 <string name="pull_to_refresh_pull_label">下拉可以刷新...</string>
+    <string name="pull_to_refresh_release_label">松手可以刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">刷新中...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    <string name="loadinfo">加载中....</string>
+    
+     <string name="userName">Tom</string>
+    <string name="title_activity_study_record">StudyRecordActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_act__bookmark">Act_Bookmark</string>
+</resources>
+
+

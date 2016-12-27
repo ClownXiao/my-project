@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"  
+    Android:orientation="horizontal" 
+    Android:layout_width="fill_parent"  
+    Android:layout_height="fill_parent">  
+  
+    <!-- 课程图片 -->  
+    <ImageView Android:id="@+id/imageItem"    
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+        Android:layout_margin="5px"/>  
+       
+    <!-- 课程信息 -->  
+    <LinearLayout Android:orientation="vertical"  
+        Android:layout_width="wrap_content"    
+        Android:layout_height="wrap_content">  
+  
+        <TextView Android:id="@+id/titleItem"    
+            Android:layout_width="wrap_content"  
+            Android:layout_height="wrap_content"    
+            
+            Android:textSize="13px" />  
+        <TextView Android:id="@+id/infoItem"    
+            Android:layout_width="wrap_content"  
+            Android:layout_height="wrap_content"    
+          
+            Android:textSize="22px" />  
+    </LinearLayout>  
+       
+ </LinearLayout>  

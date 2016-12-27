@@ -1,0 +1,39 @@
+package demo.bupt.course;
+
+import java.io.File;
+
+import android.app.Activity;
+import android.graphics.PixelFormat;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+import demo.Elearn.R;
+
+public class VideoPlay extends Activity {
+	VideoView videoView;
+	MediaController mController;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		getWindow().setFormat(PixelFormat.TRANSLUCENT);
+		setContentView(R.layout.video);
+
+		videoView = (VideoView) findViewById(R.id.course_video);
+		mController = new MediaController(this);
+		File video = new File(
+				"/storage/sdcard0/MIUI/Gallery/DemoVideo/XiaomiPhone.mp4");
+
+		if (video.exists()) {
+			videoView.setVideoPath(video.getAbsolutePath());
+			videoView.setMediaController(mController);
+			mController.setMediaPlayer(videoView);
+			videoView.requestFocus();
+			videoView.start();
+
+		}
+
+	}
+
+}

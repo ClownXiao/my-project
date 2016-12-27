@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:orientation="vertical" >  
+  
+    <RelativeLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent" >  
+  
+        <demo.bupt.course.MyVideoView  
+            android:id="@+id/audtoView"  
+            android:layout_width="match_parent"  
+            android:layout_height="match_parent" />  
+    </RelativeLayout>  
+  
+    <LinearLayout  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_gravity="bottom" >  
+  
+        <Button
+            android:id="@+id/audio_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="start_audio" />
+  
+        <Button
+            android:id="@+id/audio_2_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bian" />
+  
+        <Button
+            android:id="@+id/entry_list_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bian" />
+  
+    </LinearLayout>  
+  
+</FrameLayout>  

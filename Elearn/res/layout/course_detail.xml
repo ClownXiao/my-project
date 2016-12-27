@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"  
+    Android:orientation="vertical"  
+    Android:layout_width="fill_parent"  
+    Android:layout_height="fill_parent">  
+       
+    <!-- 结算 -->  
+
+     <ScrollView
+         Android:id="@+id/scroll_course_detail"
+         Android:layout_width="match_parent"
+         Android:layout_height="match_parent" >
+
+    <LinearLayout
+        Android:layout_width="316dp"
+        Android:layout_height="443dp"
+        Android:gravity="center_horizontal"
+        Android:orientation="vertical" >
+  
+    <TextView Android:id="@+id/course_name"  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+       
+        Android:text="课程名称+章节名称 "    
+        Android:textSize="22px"/>
+
+    <TextView
+        Android:id="@+id/course_introduction"
+        Android:layout_width="wrap_content"
+        Android:layout_height="wrap_content"
+        Android:text="  销售是一项报酬率非常高的艰难工作，也是一项报酬率最低的轻松工作。销售，说大不大，说小不小。小可做一针一线，大可做跨国集团。但究其本质，都是相似的。你的行动决定了你的报酬。你可以成为一个高收入的辛勤工作者，也可以成为一个收入最低的轻松工作者。这一切完全取决于你对销售工作是怎么看怎么想怎么做的。"
+        Android:textSize="22px" />
+  
+        <ImageView
+            Android:id="@+id/course_pic"
+            Android:layout_width="fill_parent"
+            Android:layout_height="150dp"
+            Android:src="@drawable/icon" />
+     	
+     	 <Button
+         Android:id="@+id/video_button"
+         Android:layout_width="wrap_content"
+         Android:layout_height="wrap_content"
+         Android:text="视频播放" />
+     	
+     	</LinearLayout>
+    </ScrollView>
+
+    
+
+ </LinearLayout>  

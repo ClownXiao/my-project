@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"  
+    Android:orientation="vertical"  
+    Android:layout_width="fill_parent"  
+    Android:layout_height="fill_parent">  
+       
+    <!-- 结算 -->  
+    <LinearLayout 
+    Android:gravity="center_horizontal"  
+    Android:orientation="horizontal" 
+    Android:layout_width="fill_parent"  
+    Android:layout_height="wrap_content">  
+    <TextView Android:id="@+id/course_name"  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+       
+        Android:text="课程名称 "    
+        Android:textSize="20px"/>  
+  
+    </LinearLayout>  
+       
+    <TextView Android:text="章节列表： "  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+        />  
+           
+    <!-- 商品列表 -->    
+    <ListView Android:id="@+id/chapter_list"    
+        Android:layout_width="fill_parent"  
+        Android:layout_height="wrap_content" />  
+           
+ </LinearLayout>  

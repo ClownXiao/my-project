@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:Android="http://schemas.android.com/apk/res/android"
+    Android:id="@+id/AbsoluteLayout1"
+    Android:layout_width="match_parent"
+    Android:layout_height="match_parent"
+    Android:background="@drawable/video_3" >
+
+    <VideoView
+        Android:id="@+id/course_video"
+        Android:layout_width="match_parent"
+        Android:layout_height="wrap_content" />
+
+    <LinearLayout
+        Android:id="@+id/videolayout"
+        Android:layout_width="match_parent"
+        Android:layout_height="40dp"
+        Android:layout_x="4dp"
+        Android:layout_y="-4dp"
+        Android:background="#8F000000"
+        Android:orientation="horizontal"
+        Android:visibility="visible" >
+
+        <Button
+            Android:id="@+id/button2"
+            Android:layout_width="80dp"
+            Android:layout_height="wrap_content"
+            Android:background="@drawable/my_button2"
+            Android:text="提问" />
+
+        <TextView
+            Android:id="@+id/textView3"
+            Android:layout_width="match_parent"
+            Android:layout_height="wrap_content"
+            Android:layout_weight="0.03"
+            Android:text="         语文/张三老师/第一章/第一节/"
+            Android:textColor="@color/blue" />
+
+        <Button
+            Android:id="@+id/about"
+            Android:layout_width="wrap_content"
+            Android:layout_height="wrap_content"
+            Android:background="@drawable/my_button2"
+            Android:text="相关视频" />
+
+    </LinearLayout>
+
+    <TextView
+        Android:id="@+id/textView4"
+        Android:layout_width="109dp"
+        Android:layout_height="37dp"
+        Android:layout_x="232dp"
+        Android:layout_y="118dp"
+        Android:text="这里是重点哦"
+        Android:textColor="@color/blue"
+        Android:visibility="invisible" />
+
+    <TextView
+        Android:id="@+id/tishi"
+        Android:layout_width="match_parent"
+        Android:layout_height="79dp"
+        Android:layout_x="464dp"
+        Android:layout_y="38dp"
+        Android:gravity="center_vertical|left"
+        Android:text="TextView"
+        Android:visibility="invisible" />
+
+</AbsoluteLayout>
