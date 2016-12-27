@@ -1,0 +1,4 @@
+Dynamic Memory Allocator
+
+Realized a general purpose dynamic memory allocator using segregated list and optimized first fit.
+Optimized minimum free block size to 16 to reduce internal fragmentation.
