@@ -1,0 +1,31 @@
+{% extends "home_base.html" %}
+
+{% block title %}
+   following-stream
+{%  endblock %}
+
+{% block blog_post %}
+<div class = "blog-maker">
+    <form action = "{% url 'add-blog' %}" method = "post">
+         {% for field in form.visible_fields %}
+        <img  id = "{{ user.id }}" class = "small-header user-head" alt = "small-head-img" src = "{% url 'head-image' user.id %}">
+        <input placeholder = "what's happening..." type="text" name = "text" class = "blog-input">
+        <button  type="submit" class="btn btn-sm btn-info blog-submit">Grumblr!</button>
+        <p class = "error-tag"> {{field.errors}}</p>
+        {% endfor %}
+    {%  csrf_token %}
+    </form>
+</div>
+{% endblock %}
+
+
+
+{% block stream-class %}
+         <ul class="nav nav-tabs stream-classify" role="tablist">
+         <li role="presentation" > <a href="{% url 'global_stream'%}">Square</a></li>
+         <li role="presentation" class="active"><a href="{% url 'follow-stream' %}">Following</a></li>
+         </ul>
+          {% if error  %}
+              <p> You have not followed anyone, Go to follow them!</p>
+          {% endif %}
+{% endblock %}

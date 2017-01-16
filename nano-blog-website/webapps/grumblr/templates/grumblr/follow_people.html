@@ -1,0 +1,29 @@
+{% extends "home_base.html" %}
+
+{% block title %}
+   my_following
+{%  endblock %}
+
+{% block blog_display %}
+      {% for target_user in people %}
+          <div class = "blog-item">
+                <img  onclick = 'window.open("/profile/{{target_user.who.username}}");' alt = "small-head-img" class = "small-header" src = "{% url 'head-image' blog.user.id%}">
+                <p class = "bloger-name"> <a class = "name-link" href = "/profile/{{target_user.who.username}}">{{target_user.last_name}} {{target_user.first_name}}</a> </p>
+                <table>
+                    <tr>
+                        <td>
+                          <span   class = "follow"> blog {{target_user.blog_num}}</span>
+                      </td>
+                        <td>
+                          <span class = "follow"> following {{target_user.following_num}} </span>
+                       </td>
+                         <td>
+                             <span class = "follow"> follower {{target_user.follower_num}}</span>
+                        </td>
+                     </tr>
+                </table>
+                <hr class = "cut-comment">
+                <hr class = "cut-line" >
+          </div>
+      {% endfor %}
+{% endblock %}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+            Grumblr
+        {%  endblock %}
+    </title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/grumblr/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this grumblr -->
+    <link href="../../static/grumblr/css/grumblr.css" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+          <a class="blog-nav-item" href="#"><span class="glyphicon glyphicon-envelope"></span> message</a>
+          <a class="logo" href = "/">grumblr</a>
+          <a class="blog-nav-item blog-nav-right"  href="#"><span class="glyphicon glyphicon-cog"></span> set </a>
+              <li class="dropdown nav-right">
+                <a href="#" class="dropdown-toggle blog-nav-item " href="/profile/{{user.username}}" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> profile</a>
+                <ul class="dropdown-menu " role="menu">
+                  <li><a href="{%  url "logout" %}">log off</a></li>
+                  <li><a href="{%  url "edit-profile" %}">Edit profile</a></li>
+                  <li><a target = "_blank" href="{% url 'change-pwd' %}">Change Possword</a></li>
+                </ul>
+              </li>
+        </nav>
+      </div>
+    </div><!-- end blog-masthead -->
+
+
+
+	  <div  class="container blog-container">
+      <div class="row">
+        <img  class = "cover-img" alt = "cover-img" src = "../../static/grumblr/images/user-cover.jpg">
+      </div>
+
+
+      <div class="row">
+	      <div class="col-sm-4 per_info">
+            <div class = "basic-profile">
+              <img  class = "bg-header" alt = "head-bg-img" src = "../../static/grumblr/images/header-cover.jpg">
+              <img  class = "big-header" alt = "head-img" src = "{% url 'head-image' target_user.who.id%}">
+              <p class = "user-name"> {{target_user.who.first_name}} {{target_user.who.last_name}} </p>
+              <p class = "description" >{{target_user.short_bio}} </p>
+            </div>
+            <div >
+              <table>
+              <tr>
+              <td>
+              <span   class = "follow"> blog </span>
+              <br/>
+              <span id = "blog-num" class = "follow-number"> {{target_user.blog_num}} </span>
+              </td>
+              <td>
+              <span class = "follow"> following</span>
+              <br/>
+              <span class = "follow-number"> {{target_user.following_num}} </span>
+              </td>
+              <td>
+              <span class = "follow"> follower</span>
+              <br/>
+              <span  class = "follow-number"> {{target_user.follower_num}} </span>
+              </td>
+              </tr>
+              </table>
+                {%  block follow-info%} {% endblock %}
+            </div>
+            <div class="panel panel-info basic-info">
+              <div class="panel-heading">
+                <h3 class="panel-title info-align">basic information</h3>
+              </div>
+              <div class="panel-body">
+                <p class = "bas_info"><span class="glyphicon glyphicon-briefcase"></span> {{target_user.age}}</p>
+                <p class = "bas_info"> <span class="glyphicon glyphicon-heart"></span> {{target_user.marriage}}</p>
+                <p class = "bas_info"><span class="glyphicon glyphicon-map-marker"></span> {{target_user.location}}</p>
+              </div>
+            </div><!-- panel-->
+        </div><!-- col -->
+
+        <div class="col-sm-7 ">
+
+  	      <div class="panel panel-info blog-main">
+            <div  class="panel-heading">
+             {% block blog_post %} {% endblock %}
+            </div><!-- panel header -->
+            {% block stream-class %}
+         <ul class="nav nav-tabs stream-classify" role="tablist">
+         <li role="presentation" class="active"><a href="#">Square</a></li>
+         <li role="presentation"><a href="{% url 'follow-stream' %}">Following</a></li>
+         </ul>
+           {% endblock %}
+            <div id = "blogs-list" class="panel-body">
+            {% block blog_display %}
+                {% for blog in blogs %}
+              <div class = "blog-item">
+                <img  onclick = 'window.open("{% url 'profile'  blog.user.username %}");' alt = "small-head-img" class = "small-header" src = "{% url 'head-image' blog.user.id%}">
+                <p class = "bloger-name">
+                    <a class = "name-link" href = {% url 'profile'  blog.user.username %}>{{blog.user.first_name}} {{blog.user.last_name}}</a>
+                    <small class = "blog-location">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                        {{ blog.location}}
+                    </small>
+                </p>
+                <p class = "blog-time"> {{blog.time}} from iphone</p>
+                <p class = "blog-body"> {{blog.text}}</p>
+                <hr class = "cut-comment">
+                  <div id = "table-comment{{ blog.id }}">
+                <table >
+                  <tr>
+                  <th>
+                    <a href="#"  class = "comment comment-noborder">
+                    <span class="glyphicon glyphicon-share"> 451</span>
+                    </a>
+                  </th>
+                  <th id = "{{ blog.id }}"  class = "comment-click">
+                    <a class = "comment" >
+                    <span id= "comment-num{{ blog.id }}" class="glyphicon glyphicon-comment">  {{ blog.comment_num }}</span>
+                    </a>
+                  </th>
+                  <th>
+                    <a href="#" class = "comment" >
+                    <span class="glyphicon glyphicon-thumbs-up"> 521</span>
+                    </a>
+                  </th>
+                </tr>
+                </table>
+                  </div>
+                <hr class = "cut-line" >
+              </div><!-- blog-item -->
+              {% endfor %}
+
+            {% endblock %}
+            </div> <!-- panel-body -->
+          </div><!-- panel -->
+
+          <!--
+          <div class = "page-nav" >
+            <nav >
+              <ul  class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+              </ul>
+            </nav>
+          </div>-->
+        </div><!--col -->
+
+        <div class = "col-sm-1" >
+          <div class="sidebar-module time-line">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">September2016</a></li>
+              <li><a href="#">August 2016</a></li>
+              <li><a href="#">July 2016</a></li>
+              <li><a href="#">June 2016</a></li>
+              <li><a href="#">May 2016</a></li>
+              <li><a href="#">April 2016</a></li>
+              <li><a href="#">December 2015</a></li>
+              <li><a href="#">November 2015</a></li>
+              <li><a href="#">October 2015</a></li>
+              <li><a href="#">September 2015</a></li>
+              <li><a href="#">August 2015</a></li>
+              <li><a href="#">June 2015</a></li>
+              <li><a href="#">May 2015</a></li>
+              <li><a href="#">April 2015</a></li>
+            </ol>
+          </div>
+        </div><!--col -->
+      </div><!-- row -->
+  </div><!-- container -->
+
+  <div id = "{{ user.id }}" class="blog-footer" >
+          <p>copy right<a href="#">@Xiaodu Ding</a>.</p>
+          <p>
+          <a href="#">Back to top</a>
+          </p>
+  </div>
+
+
+
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../static/grumblr/css/bootstrap.min.js"></script>
+    <script src="../../static/js/grumblr.js" type="text/javascript"></script>
+    <script src="../../static/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+</body>
+</html>
+

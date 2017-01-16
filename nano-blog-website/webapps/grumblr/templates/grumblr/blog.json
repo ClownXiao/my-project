@@ -1,0 +1,5 @@
+{
+  "html":"{{blog.html|safe}}",
+  "time": "{{blog.time}}",
+  "blogid": "{{blog.id}}"
+}

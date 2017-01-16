@@ -1,0 +1,11 @@
+{
+  "blogs":[
+
+    {% for blog in blogs %}
+       {% include 'blog.json' %}
+       {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+  ],
+  "message" : "{{message}}",
+  "timestamp":"{{timestamp}}"
+}

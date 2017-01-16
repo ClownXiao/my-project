@@ -1,0 +1,26 @@
+{% extends "home_base.html" %}
+
+{% block title %}
+   profile
+{%  endblock %}
+
+
+{% block follow-info %}
+    {% if fans %}
+    <a  href = "{% url 'unfollow'  target_user.id  %}">
+    <button type="button" class="btn btn-info follow-btn" >unfollow</button>
+
+    {%  elif target_user.id != user.id%}
+
+    <a  href = "{% url 'follow'  target_user.id  %}">
+    <button type="button" class="btn btn-info follow-btn" >follow</button>
+
+    {% endif %}
+
+    {% if errors %}
+        <p class = "error-tag"> {{errors}}!</p>
+    {% endif %}
+
+    </a>
+
+{% endblock %}

@@ -1,0 +1,579 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+	height: 50px;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 700;
+  color: #cdddeb;
+}
+
+.blog-nav-right{
+	left:550px;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+.logo {
+  font-family: "Comic Sans MS", cursive;
+  ont-style:italic;
+  position: relative;
+  left:30%;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 700;
+  color: #cdddeb;
+}
+
+.logo-cen{
+	left:45%;
+}
+
+/*
+ * User header and information
+ */
+
+.blog-container{
+	position:relative;
+	top:3px;
+	left:77px;
+	width:1350px;
+}
+
+.blog-main{
+	width: 81%;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.cover-img{
+	position:relative;
+	left:115px;
+	height: 200px;
+	width: 1000px;
+}
+
+
+.nav-right{
+	list-style-type:none;
+		position:relative;
+	top: -40px;
+	left:95%
+}
+
+
+.drop-button{
+	background-color:transparent;
+   border:0px;
+}
+
+.per_info{
+	position:relative;
+	left: 100px;
+}
+
+.info-align{
+	text-align: center;
+}
+.basic-info{
+	position:relative;
+	left: 40px;
+	top:60px;
+	width: 52%;
+}
+.big-header{
+	position:absolute;
+	left: 110px;
+	top: 80px;
+	border-radius: 50%;
+	border: 3px solid #eee;
+	overflow: hidden;
+	height: 100px;
+	width: 100px;
+}
+
+.bg-header{
+	padding-top: 20px;
+	height: 150px;
+	width: 300px;
+	border-radius: 0%;
+	filter: url(blur.svg#blur);
+    -webkit-filter: blur(0px);
+}
+
+.user-name{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	margin-top: 30px;
+	position: relative;
+	text-align: center;
+	width:300px;
+    left: 0px;
+	color: black;
+}
+
+.description{
+	positon: relative;
+	width: 300px;
+	font-style: italic;
+	font-family:"Times New Roman", Times, serif;
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+.follow{
+	color:#3CF;
+	font-family:"Times New Roman", Times, serif;
+	border-left: 1px solid #D9D9D9;
+margin-left: 20px;
+padding-left: 20px;
+ font-size: 15px;
+}
+
+.follow-number{
+	font-weight: 600;
+	font-family:"Times New Roman", Times, serif;
+	color: black;
+	margin-left: 20px;
+	padding-left: 20px;
+ 	font-size: 15px;
+ 	text-align: center;
+}
+
+.follow-left{
+	border-left: 0px;
+	padding-left: 10px;
+}
+
+.follow-btn{
+	position: relative;
+	left: 23%;
+	width: 100px;
+}
+td{
+	text-align: center;
+}
+
+/*
+ * Blog
+ */
+
+.name-link{
+	color: black;
+}
+.blog-maker{
+	position: relative;
+	left: 20px;
+}
+
+.error-tag{
+	position:relative;
+	left: 12%;
+	color: red;
+}
+
+.blog-input{
+	position: relative;
+	left: 5px;
+	width: 380px;
+	height: 30px;
+}
+
+.comment-input{
+	position: relative;
+	left: 60px;
+	top:-40px;
+	width: 380px;
+	height: 30px;
+}
+.comment-btn{
+	position: relative;
+    top: -42px;
+    left: 80px;
+}
+.blog-submit{
+	position: relative;
+	left: 3%;
+}
+
+.small-header{
+	border-radius: 50%;
+	border: 3px solid #eee;
+	overflow: hidden;
+	height: 60px;
+	width: 60px;
+}
+
+.smaller-header{
+	border-radius: 50%;
+	border: 3px solid #eee;
+	overflow: hidden;
+	height: 50px;
+	width: 50px;
+}
+
+.stream-classify{
+	font-size: 10px;
+}
+
+.blog-item{
+	float: left;
+}
+
+.bloger-name{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: black;
+	position:relative;
+	left: 70px;
+	top: -50px;
+}
+
+.blog-location{
+	font-family:"Times New Roman", Times, serif;
+	position:relative;
+	font-size: 10px;
+	color: #557;
+}
+
+.blog-time{
+	font-family:"Times New Roman", Times, serif;
+	position:relative;
+	left: 70px;
+	top: -60px;
+}
+
+.blog-body{
+	width: 81%;
+	font-family:"Times New Roman", Times, serif;
+	color: black;
+	font-size: 20px;
+	position:relative;
+	left: 70px;
+	top: -60px;
+}
+
+.blog-img{
+	position:relative;
+	left: 70px;
+	top: -60px;
+	width: 400px;
+	height: 300px;
+}
+
+.comment{
+	font-family:Tahoma, Geneva, sans-serif;
+	color: #555;
+	border-left: 1px solid #D9D9D9;
+margin-left: 60px;
+padding-left: 40px;
+ font-size: 15px;
+}
+
+.comment-noborder{
+	border-left: 0px;
+	padding-left: 40px;
+}
+
+.cut-line{
+	position: relative;
+	left:-15px;
+	width: 612px;
+	border: 0;
+	border-bottom: 1px solid #3CF;
+}
+
+.cut-comment{
+	position: relative;
+	left:-15px;
+	width: 550px;
+}
+
+.page-nav{
+	position: relative;
+	left: 20px;
+}
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+	position:relative;
+	top: 50px;
+	text-align: left;
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.time-line{
+	width:200%;
+	position:relative;
+	top: -5px;
+	left:-110px;
+}
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 20px 0;
+  color: #555;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * login form
+ */
+
+.login-bg{
+	background-image:url(../images/bg.jpg);
+	background-size: 100%;
+	background-repeat:no-repeat;
+}
+.login-panel{
+	position:relative;
+	left: 70%;
+	margin-top: 150px;
+	width: 400px;
+}
+
+.login-input{
+	padding: 30px;
+}
+
+.login-input2{
+	padding-left: 30px;
+}
+
+.login-button{
+	margin-left: 85px;
+	width:100px;
+}
+
+.reset-button{
+	margin-left: 85px;
+	width:330px;
+	position: relative;
+	left:-95px;
+}
+
+.login-signup{
+	padding-top: 30px;
+}
+
+.forget-pwd{
+	position: relative;
+	left:240px;
+	top: -20px;
+	text-align: right;
+}
+
+.register-input{
+	padding: 20px;
+}
+
+.register-button{
+	margin:20px;
+	width:330px;
+}
+
+.filePrew {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 140px;
+height: 39px;
+font-size: 100px;
+opacity: 0;
+filter:alpha(opacity=0);
+}
+
+.comment-div{
+	width: 95%;
+	display: block;
+}
+
+.send_comment{
+	height:70px;
+}
+
+.comment-text{
+    position: relative;
+    top: -45px;
+    left: 60px;
+    font-size: 20px;
+    color: black;
+}
+
+.comment-name{
+    position: relative;
+    top: -55px;
+    left: 60px;
+    font-size: 20px;
+    color: rgb(232, 149, 61)
+}
+
+.comment-time{
+    position: relative;
+    top: -110px;
+    left: 60px;
+    font-size: 15px
+}
+
+.comment-item{
+    height:100px;
+}
+
+.comment-hr{
+    top: -80px;
+    position: relative
+}
+
+.comment-error{
+    position: relative;
+    top: -45px;
+    left: 60px;
+    color: red;
+}

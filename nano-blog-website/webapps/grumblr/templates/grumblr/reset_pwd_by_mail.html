@@ -1,0 +1,36 @@
+
+{% extends "sign_base.html" %}
+
+{% block title %}
+   Reset password by email
+{%  endblock %}
+
+{% block sign-title %}
+     <h3 class="panel-title">Find Password via email</h3>
+
+    {% for error in form.non_field_errors %}
+       <p class = "error-tag"> {{error}}</p>
+    {% endfor %}
+
+{% endblock %}
+
+{% block sign_form %}
+     <form action="{% url 'reset_pwd_by_mail' %}" method="post" class="login-form">
+         {% for field in form.visible_fields %}
+             <div class="input-group register-input">
+  				         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                   <input type="text" class="form-control" placeholder="{{field.label}}" name = "{{field.name}}">
+             </div>
+              <p class = "error-tag">  {{field.errors}}</p>
+         {% endfor %}
+             <div class = "login-input2">
+                   <button type="submit" class="btn sm btn-info reset-button">reset password</button>
+             </div>
+
+         {% csrf_token %}
+     </form>
+{% endblock %}
+
+
+
+<

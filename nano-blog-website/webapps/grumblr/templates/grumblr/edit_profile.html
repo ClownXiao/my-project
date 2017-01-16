@@ -1,0 +1,41 @@
+{% extends "home_base.html" %}
+
+{% block title %}
+    edit-profile
+{%  endblock %}
+
+{% block blog_post %}
+{% for error in form.non_field_errors %}
+ <p class = "error-tag"> {{error}}</p>
+{% endfor %}
+{% endblock %}
+
+{% block stream-class %}
+
+{% endblock %}
+
+{% block blog_display %}
+    <form ENCTYPE="multipart/form-data" action = "{% url 'edit-profile'%}" method="post" class="login-form">
+
+        <div class = "head-change">
+            {%  if form.head_image.value %}
+                 <img  class = "small-header head-change" alt = "head-img" src = "{% url 'head-image' user.id%}">
+             {% endif %}
+
+            <a class="btn_addPic">click to change
+            <input class="filePrew" type = "file" name = "head_image" >
+            </a>
+        </div>
+
+        {% for field in form.visible_fields %}
+            <div class="input-group register-input">
+  				         <span class="input-group-addon"><span >{{field.label}}</span></span>
+                  {{ field }}
+             </div>
+                 <p class = "error-tag"> {{field.errors}}</p>
+        {% endfor %}
+
+        <button type="submit" class="btn sm btn-info register-button">Submit</button>
+        {% csrf_token %}
+    </form>
+{% endblock %}

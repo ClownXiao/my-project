@@ -1,0 +1,11 @@
+{
+  "comments":[
+
+    {% for comment in comments %}
+       {% include 'comment.json' %}
+       {% if not forloop.last %}, {% endif %}
+    {% endfor %}
+  ],
+  "blogid" : "{{blogid}}",
+  "message" : "{{message}}"
+}
